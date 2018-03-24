@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npm run build && node server.js",
-		"build": "parcel build ./client/index.html --out-dir public/dist",
+		"build": "parcel build ./app/index.html --out-dir public/dist",
+		"dev": "parcel ./app/index.html --out-dir public/dist",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
