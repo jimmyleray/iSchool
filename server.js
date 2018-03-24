@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
 
+var compression = require('compression')
+app.use(compression())
+
 app.set('port', process.env.PORT || 1234)
 
 app.use(express.static(__dirname + '/build'))
