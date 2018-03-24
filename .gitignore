@@ -60,3 +60,6 @@ typings/
 # Parcel cache and build
 .cache
 dist
+
+# Javascript transpiled
+server.js
