@@ -59,4 +59,4 @@ typings/
 
 # Parcel cache and build
 .cache
-/public/dist
+build
