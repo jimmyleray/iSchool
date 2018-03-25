@@ -1,39 +1,34 @@
 import * as React from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import AppBar from 'material-ui/AppBar'
+import Toolbar from 'material-ui/Toolbar'
+import Typography from 'material-ui/Typography'
+import { withStyles, WithStyles } from 'material-ui/styles'
 
-export interface iNavbarState {
-  isOpen: boolean
-}
+interface Props {}
 
-export default class ISNavbar extends React.Component<{}, iNavbarState> {
-  constructor(props: any) {
-    super(props)
+const styles = { root: { flexGrow: 1 } }
 
-    this.toggle = this.toggle.bind(this)
-    this.state = {
-      isOpen: false
+export default withStyles(styles)(
+  class ISNavbar extends React.Component<Props & WithStyles<'root'>> {
+    classes: any
+
+    constructor(props: Props & WithStyles<'root'>) {
+      super(props)
+      this.classes = props.classes
+    }
+
+    render() {
+      return (
+        <div className={this.classes.root}>
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="title" color="inherit">
+                iSchool
+              </Typography>
+            </Toolbar>
+          </AppBar>
+        </div>
+      )
     }
   }
-
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
-  }
-
-  render() {
-    return (
-      <Navbar color="faded" light expand="md">
-        <NavbarBrand href="/">iSchool</NavbarBrand>
-        <NavbarToggler onClick={this.toggle} />
-        <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="https://github.com/JimmyLERAY/iSchool">GitHub</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    )
-  }
-}
+)

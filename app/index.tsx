@@ -1,5 +1,5 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import ISNavbar from './components/navbar'
+import ISApp from './components/app'
 
-ReactDOM.render(<ISNavbar />, document.getElementById('app'))
+ReactDOM.render(<ISApp />, document.getElementById('app'))
