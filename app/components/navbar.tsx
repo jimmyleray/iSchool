@@ -4,22 +4,17 @@ import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import { withStyles, WithStyles } from 'material-ui/styles'
 
-interface Props {}
-
-const styles = theme => ({ root: { flexGrow: 1 } })
+const styles = { root: { flexGrow: 1 } }
 
 export default withStyles(styles)(
-  class extends React.PureComponent<Props & WithStyles<'root'>, {}> {
-    classes: any
-
+  class extends React.PureComponent<WithStyles<'root'>, {}> {
     constructor(props) {
       super(props)
     }
 
     render() {
-      const { classes } = this.props
       return (
-        <div className={classes.root}>
+        <div className={this.props.classes.root}>
           <AppBar position="static" color="default">
             <Toolbar>
               <Typography variant="title">iSchool</Typography>
