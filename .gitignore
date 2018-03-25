@@ -58,8 +58,8 @@ typings/
 .env
 
 # Parcel cache and build
+server/dist
 .cache
-dist
 
 # Javascript transpiled
-server.js
+server/**/*.js

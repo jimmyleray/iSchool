@@ -1,5 +1,6 @@
-import * as express from 'express'
 import * as compression from 'compression'
+import * as express from 'express'
+import * as path from 'path'
 
 const app = express()
 
@@ -7,10 +8,10 @@ app.use(compression())
 
 app.set('port', process.env.PORT || 1234)
 
-app.use(express.static(__dirname + '/dist'))
+app.use(express.static(path.join(__dirname, 'dist')))
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/dist/index.html')
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
 app.listen(app.get('port'), () => {
