@@ -1,5 +1,8 @@
 import * as React from 'react'
-import { AppBar, Toolbar, Typography, withStyles, WithStyles } from 'material-ui'
+import AppBar from 'material-ui/AppBar'
+import Toolbar from 'material-ui/Toolbar'
+import Typography from 'material-ui/Typography'
+import { withStyles, WithStyles } from 'material-ui/styles'
 
 interface Props {}
 
