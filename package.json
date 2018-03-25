@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && npm run server",
-    "dev":
-      "parcel watch ./app/index.html --out-dir ./server/dist --public-url ./",
-    "build":
-      "parcel build ./app/index.html --out-dir ./server/dist --public-url ./",
+    "dev": "parcel watch ./app/index.html --out-dir ./server/dist --public-url ./",
+    "build": "parcel build ./app/index.html --out-dir ./server/dist --public-url ./",
     "server": "tsc server/index.ts && node server/index.js"
   },
   "repository": {
