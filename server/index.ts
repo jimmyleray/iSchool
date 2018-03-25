@@ -6,7 +6,7 @@ const app = express()
 
 app.use(compression())
 
-app.set('port', process.env.PORT || 1234)
+app.set('port', process.env.PORT || 4200)
 
 app.use(express.static(path.join(__dirname, 'dist')))
 
