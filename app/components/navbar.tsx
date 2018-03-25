@@ -1,25 +1,22 @@
 import * as React from 'react'
-import AppBar from 'material-ui/AppBar'
-import Toolbar from 'material-ui/Toolbar'
-import Typography from 'material-ui/Typography'
-import { withStyles, WithStyles } from 'material-ui/styles'
+import { AppBar, Toolbar, Typography, withStyles, WithStyles } from 'material-ui'
 
 interface Props {}
 
-const styles = { root: { flexGrow: 1 } }
+const styles = theme => ({ root: { flexGrow: 1 } })
 
 export default withStyles(styles)(
-  class ISNavbar extends React.Component<Props & WithStyles<'root'>> {
+  class ISNavbar extends React.Component<Props & WithStyles<'root'>, {}> {
     classes: any
 
-    constructor(props: Props & WithStyles<'root'>) {
+    constructor(props) {
       super(props)
-      this.classes = props.classes
     }
 
     render() {
+      const { classes } = this.props
       return (
-        <div className={this.classes.root}>
+        <div className={classes.root}>
           <AppBar position="static">
             <Toolbar>
               <Typography variant="title" color="inherit">

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import CssBaseline from 'material-ui/CssBaseline'
+import { CssBaseline } from 'material-ui'
 import ISNavbar from './navbar'
 
 export default class ISApp extends React.Component {
