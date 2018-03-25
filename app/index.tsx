@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import ISApp from './components/app'
+import { render } from 'react-dom'
+import App from './components/app'
 
-ReactDOM.render(<ISApp />, document.getElementById('app'))
+render(<App />, document.getElementById('app'))

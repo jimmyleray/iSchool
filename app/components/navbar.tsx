@@ -9,7 +9,7 @@ interface Props {}
 const styles = theme => ({ root: { flexGrow: 1 } })
 
 export default withStyles(styles)(
-  class ISNavbar extends React.Component<Props & WithStyles<'root'>, {}> {
+  class extends React.PureComponent<Props & WithStyles<'root'>, {}> {
     classes: any
 
     constructor(props) {
@@ -20,11 +20,9 @@ export default withStyles(styles)(
       const { classes } = this.props
       return (
         <div className={classes.root}>
-          <AppBar position="static">
+          <AppBar position="static" color="default">
             <Toolbar>
-              <Typography variant="title" color="inherit">
-                iSchool
-              </Typography>
+              <Typography variant="title">iSchool</Typography>
             </Toolbar>
           </AppBar>
         </div>

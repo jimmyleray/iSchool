@@ -1,13 +1,13 @@
 import * as React from 'react'
 import CssBaseline from 'material-ui/CssBaseline'
-import ISNavbar from './navbar'
+import Navbar from './navbar'
 
-export default class ISApp extends React.Component {
+export default class ISApp extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
         <CssBaseline />
-        <ISNavbar />
+        <Navbar />
       </React.Fragment>
     )
   }
