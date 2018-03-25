@@ -1,8 +1,12 @@
 import * as compression from 'compression'
 import * as express from 'express'
 import * as path from 'path'
+import chalk from 'chalk'
 
 const app = express()
+
+const log = console.log
+const success = chalk.greenBright
 
 app.use(compression())
 
@@ -15,5 +19,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(app.get('port'), () => {
-  console.log('Node app is running on port', app.get('port'))
+  log(success(`Server is running on port ${app.get('port')}`))
 })
