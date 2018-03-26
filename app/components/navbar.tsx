@@ -3,6 +3,7 @@ import AppBar from 'material-ui/AppBar'
 import Button from 'material-ui/Button'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
+import { Link } from 'react-router-dom'
 
 export default class extends React.PureComponent {
   render() {
@@ -14,6 +15,9 @@ export default class extends React.PureComponent {
               iSchool
             </Typography>
           </div>
+          <Link to="/about">
+            <Button color="inherit">About</Button>
+          </Link>
           <Button href="https://github.com/JimmyLERAY/iSchool" color="inherit">
             GitHub
           </Button>
