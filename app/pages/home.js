@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Typography from 'material-ui/Typography'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
-export default injectIntl(() => (
+export default () => (
   <Typography variant="title">
-    <FormattedMessage id="helloWorld" defaultMessage="Not work !" />
+    <FormattedMessage id="hello" defaultMessage="__hello__" />
   </Typography>
-))
+)

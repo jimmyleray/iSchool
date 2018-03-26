@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import { addLocaleData, IntlProvider } from 'react-intl'
 import en from 'react-intl/locale-data/en'
 import fr from 'react-intl/locale-data/fr'
+import es from 'react-intl/locale-data/es'
 import messages from '../config/i18n'
 
-addLocaleData([...en, ...fr])
+addLocaleData([...en, ...es, ...fr])
 
 const mapStateToProps = state => ({
   locale: state.locale

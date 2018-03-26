@@ -30,8 +30,9 @@ export default injectIntl(
           }}
           style={{ color: 'inherit' }}
         >
-          <MenuItem value="fr">FR</MenuItem>
-          <MenuItem value="en">EN</MenuItem>
+          <MenuItem value="en">English</MenuItem>
+          <MenuItem value="es">Español</MenuItem>
+          <MenuItem value="fr">Français</MenuItem>
         </Select>
       </FormControl>
     </form>
