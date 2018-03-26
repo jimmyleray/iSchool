@@ -4,21 +4,19 @@ import Button from 'material-ui/Button'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import { Link } from 'react-router-dom'
-import { injectIntl, FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import Locales from './locales'
 
 export default () => (
-  <AppBar position="static" color="primary">
+  <AppBar position="static" color="default">
     <Toolbar>
       <Link to="/">
-        <Typography variant="title" color="inherit">
-          iSchool
-        </Typography>
+        <Typography variant="title">iSchool</Typography>
       </Link>
       <div style={{ flex: 1 }} />
       <Locales />
       <Link to="/login">
-        <Button color="inherit">
+        <Button>
           <FormattedMessage id="login" defaultMessage="__login__" />
         </Button>
       </Link>
