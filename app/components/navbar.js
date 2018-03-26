@@ -4,6 +4,7 @@ import Button from 'material-ui/Button'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import { Link } from 'react-router-dom'
+import Locales from './locales'
 
 export default () => (
   <AppBar position="static" color="primary">
@@ -14,6 +15,7 @@ export default () => (
         </Typography>
       </Link>
       <div style={{ flex: 1 }} />
+      <Locales />
       <Link to="/login">
         <Button color="inherit">Login</Button>
       </Link>
