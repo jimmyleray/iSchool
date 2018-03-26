@@ -1,4 +1,11 @@
 import Home from '../pages/home'
-import About from '../pages/about'
+import Login from '../pages/login'
+import Subscribe from '../pages/subscribe'
 
-export default [{ path: '/', exact: true, component: Home }, { path: '/about', component: About }]
+const routes = [
+  { path: '/', exact: true, component: Home },
+  { path: '/login', component: Login },
+  { path: '/subscribe', component: Subscribe }
+]
+
+export default routes
