@@ -7,12 +7,12 @@ import Typography from 'material-ui/Typography'
 export default class extends React.PureComponent {
   render() {
     return (
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="primary">
         <Toolbar>
-          <Typography variant="title" style={{ flex: 1 }}>
+          <Typography variant="title" color="inherit" style={{ flex: 1 }}>
             iSchool
           </Typography>
-          <Button href="https://github.com/JimmyLERAY/iSchool" color="primary">
+          <Button href="https://github.com/JimmyLERAY/iSchool" color="inherit">
             GitHub
           </Button>
         </Toolbar>
