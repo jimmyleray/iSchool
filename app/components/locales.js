@@ -6,7 +6,7 @@ import { InputLabel } from 'material-ui/Input'
 import Select from 'material-ui/Select'
 import { MenuItem } from 'material-ui/Menu'
 import { changeLocale } from '../store/locale'
-import { messages } from '../config/i18n'
+import { languages } from '../config/i18n'
 
 const mapStateToProps = state => ({
   locale: state.locale
@@ -22,9 +22,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(props => (
   <form autoComplete="off" style={{ marginRight: '16px' }}>
     <FormControl>
       <Select name="locale" value={props.locale} onChange={props.onChange}>
-        {R.keys(messages.languages).map(key => (
+        {R.keys(languages).map(key => (
           <MenuItem value={key} key={key}>
-            {messages.languages[key]}
+            {languages[key]}
           </MenuItem>
         ))}
       </Select>

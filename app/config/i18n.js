@@ -1,11 +1,13 @@
 import * as R from 'ramda'
 
+export const languages = {
+  fr: 'Français',
+  en: 'English',
+  es: 'Español'
+}
+
 export const messages = {
-  languages: {
-    fr: 'Français',
-    en: 'English',
-    es: 'Español'
-  },
+  languages,
   homePage: {
     fr: "Page d'accueil",
     en: 'Home page',
