@@ -8,13 +8,14 @@ import { Link } from 'react-router-dom'
 export default () => (
   <AppBar position="static" color="primary">
     <Toolbar>
-      <div style={{ flex: 1 }}>
+      <Link to="/">
         <Typography variant="title" color="inherit">
           iSchool
         </Typography>
-      </div>
-      <Link to="/about">
-        <Button color="inherit">About</Button>
+      </Link>
+      <div style={{ flex: 1 }} />
+      <Link to="/login">
+        <Button color="inherit">Login</Button>
       </Link>
       <Button href="https://github.com/JimmyLERAY/iSchool" color="inherit">
         GitHub
