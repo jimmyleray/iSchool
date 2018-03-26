@@ -3,7 +3,7 @@ import Typography from 'material-ui/Typography'
 import { FormattedMessage } from 'react-intl'
 
 export default () => (
-  <Typography variant="title">
-    <FormattedMessage id="hello" defaultMessage="__hello__" />
+  <Typography variant="display1">
+    <FormattedMessage id="homePage" defaultMessage="__homePage__" />
   </Typography>
 )

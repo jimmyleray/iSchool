@@ -1,19 +1,24 @@
 import * as R from 'ramda'
 
-const messages = {
-  hello: {
-    en: 'Hello World !',
-    fr: 'Bonjour le monde !',
-    es: 'Hola Mundo !'
+export const messages = {
+  languages: {
+    fr: 'Français',
+    en: 'English',
+    es: 'Español'
+  },
+  homePage: {
+    fr: "Page d'accueil",
+    en: 'Home page',
+    es: 'Pagina de inicio'
   },
   login: {
-    en: 'Login',
     fr: 'Connexion',
+    en: 'Login',
     es: 'Conexión'
   },
   loginPage: {
-    en: 'Login page',
     fr: 'Page de connexion',
+    en: 'Login page',
     es: 'Página de acceso'
   }
 }
