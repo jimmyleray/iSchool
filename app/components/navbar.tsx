@@ -9,9 +9,11 @@ export default class extends React.PureComponent {
     return (
       <AppBar position="static" color="primary">
         <Toolbar>
-          <Typography variant="title" color="inherit" style={{ flex: 1 }}>
-            iSchool
-          </Typography>
+          <div style={{ flex: 1 }}>
+            <Typography variant="title" color="inherit">
+              iSchool
+            </Typography>
+          </div>
           <Button href="https://github.com/JimmyLERAY/iSchool" color="inherit">
             GitHub
           </Button>

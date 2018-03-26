@@ -1,16 +1,13 @@
 import * as React from 'react'
-import CssBaseline from 'material-ui/CssBaseline'
-import { MuiThemeProvider } from 'material-ui/styles'
-import theme from '../config/theme'
-import Navbar from './navbar'
+import ThemeProvider from '../providers/theme'
+import MainLayout from '../layouts/main'
 
 export default class extends React.PureComponent {
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        <Navbar />
-      </MuiThemeProvider>
+      <ThemeProvider>
+        <MainLayout />
+      </ThemeProvider>
     )
   }
 }
