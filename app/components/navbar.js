@@ -11,7 +11,9 @@ export default () => (
   <AppBar position="static" color="default">
     <Toolbar>
       <Link to="/">
-        <Typography variant="title">iSchool</Typography>
+        <Typography variant="title">
+          i<b>School</b>
+        </Typography>
       </Link>
       <div style={{ flex: 1 }} />
       <Locales />
