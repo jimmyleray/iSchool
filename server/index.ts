@@ -1,12 +1,10 @@
 import * as compression from 'compression'
 import * as express from 'express'
 import * as path from 'path'
-import chalk from 'chalk'
+
+import { log, success } from './src/log'
 
 const app = express()
-
-const log = console.log
-const success = chalk.greenBright
 
 app.use(compression())
 
