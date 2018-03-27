@@ -6,7 +6,7 @@ export const languages = {
   es: 'Español'
 }
 
-export const messages = {
+const messages = {
   languages,
   homePage: {
     fr: "Page d'accueil",
