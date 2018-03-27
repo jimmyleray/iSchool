@@ -20,6 +20,7 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(props => (
   <form autoComplete="off" style={{ marginRight: '16px' }}>
+    {props.locale}
     <FormControl>
       <Select name="locale" value={props.locale} onChange={props.onChange}>
         {R.keys(languages).map(key => (
