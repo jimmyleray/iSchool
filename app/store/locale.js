@@ -1,6 +1,9 @@
 export const changeLocale = locale => ({ type: 'CHANGE_LOCALE', locale })
 
-export default (state = navigator.language || 'en', action) => {
+const defaultLocale = 'en'
+const initialState = navigator && navigator.language ? navigator.language : defaultLocale
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'CHANGE_LOCALE':
       return action.locale
