@@ -7,24 +7,28 @@ import { Link } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 import Locales from './locales'
 
-export default () => (
-  <AppBar position="static" color="default">
-    <Toolbar>
-      <Link to="/">
-        <Typography variant="title">
-          i<b>School</b>
-        </Typography>
-      </Link>
-      <div style={{ flex: 1 }} />
-      <Locales />
-      <Link to="/login">
-        <Button>
-          <FormattedMessage id="login" defaultMessage="__login__" />
-        </Button>
-      </Link>
-      <Button href="https://github.com/JimmyLERAY/iSchool" color="inherit">
-        GitHub
-      </Button>
-    </Toolbar>
-  </AppBar>
-)
+export default class extends React.PureComponent {
+  render() {
+    return (
+      <AppBar position="static" color="default">
+        <Toolbar>
+          <Link to="/">
+            <Typography variant="title">
+              i<b>School</b>
+            </Typography>
+          </Link>
+          <div style={{ flex: 1 }} />
+          <Locales />
+          <Link to="/login">
+            <Button>
+              <FormattedMessage id="login" defaultMessage="__login__" />
+            </Button>
+          </Link>
+          <Button href="https://github.com/JimmyLERAY/iSchool" color="inherit">
+            GitHub
+          </Button>
+        </Toolbar>
+      </AppBar>
+    )
+  }
+}

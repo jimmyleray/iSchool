@@ -5,11 +5,11 @@ import { FormControl } from 'material-ui/Form'
 import { InputLabel } from 'material-ui/Input'
 import Select from 'material-ui/Select'
 import { MenuItem } from 'material-ui/Menu'
-import { changeLocale } from '../store/locale'
+import { changeLocale } from '../store/i18n'
 import { languages } from '../config/i18n'
 
 const mapStateToProps = state => ({
-  locale: state.locale
+  locale: state.i18n.locale
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -18,16 +18,22 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(props => (
-  <form autoComplete="off" style={{ marginRight: '16px' }}>
-    <FormControl>
-      <Select name="locale" value={props.locale} onChange={props.onChange}>
-        {R.keys(languages).map(key => (
-          <MenuItem value={key} key={key}>
-            {languages[key]}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
-  </form>
-))
+class Locales extends React.PureComponent {
+  render() {
+    return (
+      <form autoComplete="off" style={{ marginRight: '16px' }}>
+        <FormControl>
+          <Select name="locale" value={this.props.locale} onChange={this.props.onChange}>
+            {R.keys(languages).map(key => (
+              <MenuItem value={key} key={key}>
+                {languages[key]}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </form>
+    )
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Locales)

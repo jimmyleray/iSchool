@@ -6,7 +6,7 @@ export const languages = {
   es: 'Español'
 }
 
-const messages = {
+export const messages = {
   languages,
   homePage: {
     fr: "Page d'accueil",
@@ -25,7 +25,7 @@ const messages = {
   }
 }
 
-export default R.memoize((locale = 'en') => {
+export const messagesWithLocale = R.memoize((locale = 'en') => {
   const res = {}
   R.keys(messages).forEach(key => {
     res[key] = messages[key][locale]

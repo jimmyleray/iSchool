@@ -3,16 +3,20 @@ import RouterProvider from '../providers/router'
 import StoreProvider from '../providers/store'
 import ThemeProvider from '../providers/theme'
 import I18nProvider from '../providers/i18n'
-import MainLayout from '../layouts/main'
+import Layout from './layout'
 
-export default () => (
-  <StoreProvider>
-    <I18nProvider>
-      <ThemeProvider>
-        <RouterProvider>
-          <MainLayout />
-        </RouterProvider>
-      </ThemeProvider>
-    </I18nProvider>
-  </StoreProvider>
-)
+export default class extends React.PureComponent {
+  render() {
+    return (
+      <StoreProvider>
+        <ThemeProvider>
+          <I18nProvider>
+            <RouterProvider>
+              <Layout />
+            </RouterProvider>
+          </I18nProvider>
+        </ThemeProvider>
+      </StoreProvider>
+    )
+  }
+}
