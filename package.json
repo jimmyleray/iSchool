@@ -7,7 +7,8 @@
     "start": "npm run build && npm run server",
     "dev": "parcel watch ./app/index.html --out-dir ./server/client --public-url ./",
     "build": "parcel build ./app/index.html --out-dir ./server/client --public-url ./",
-    "server": "sudo service mongod restart && tsc server/index.ts && node server/index.js"
+    "server": "tsc server/index.ts && node server/index.js",
+    "mongod": "sudo service mongod restart && mongoui"
   },
   "repository": {
     "type": "git",
