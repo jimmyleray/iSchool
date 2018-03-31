@@ -4,7 +4,6 @@ import { addLocaleData, IntlProvider } from 'react-intl'
 import fr from 'react-intl/locale-data/fr'
 import en from 'react-intl/locale-data/en'
 import es from 'react-intl/locale-data/es'
-import { messagesWithLocale } from '../config/i18n'
 import Loading from '../components/loading'
 
 addLocaleData([...fr, ...en, ...es])
