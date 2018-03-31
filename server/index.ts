@@ -13,10 +13,6 @@ mongoose
   .then(() => log(success('Connected to MongoDB')))
   .catch(() => log(error('MongoDB connection failed')))
 
-const Cat = mongoose.model('Cat', { name: String })
-const kitty = new Cat({ name: 'Zildjian' })
-kitty.save()
-
 // Create Express App
 const app = express()
 
