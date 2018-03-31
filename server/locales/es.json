@@ -2,5 +2,11 @@
   "language": "Español",
   "homePage": "Página de inicio",
   "login": "Conexión",
-  "loginPage": "Página de acceso"
+  "loginPage": "Página de acceso",
+  "individuals": "Individuos",
+  "individualsPage": "Página de individuos",
+  "professionals": "Professionals",
+  "professionalsPage": "Página de profesionales",
+  "contributors": "Contribuyentes",
+  "contributorsPage": "Página de contribuyentes"
 }

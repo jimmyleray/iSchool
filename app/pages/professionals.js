@@ -10,11 +10,11 @@ export default class extends React.PureComponent {
       <React.Fragment>
         <MetaTags>
           <title>
-            {appTitle} {titleSep} Subscribe
+            {appTitle} {titleSep} Professionals
           </title>
         </MetaTags>
         <Typography variant="display1">
-          <FormattedMessage id="subscribePage" defaultMessage="__subscribePage__" />
+          <FormattedMessage id="professionalsPage" defaultMessage="__professionalsPage__" />
         </Typography>
       </React.Fragment>
     )

@@ -12,11 +12,20 @@ export default class extends React.PureComponent {
     return (
       <AppBar position="static" color="primary">
         <Toolbar>
-          <Link to="/">
+          <Link to="/" style={{ marginRight: '16px' }}>
             <Typography variant="title">
               i<b>School</b>
             </Typography>
           </Link>
+          {['individuals', 'professionals', 'contributors'].map((link, idx) => {
+            return (
+              <Link key={idx} to={`/${link}`}>
+                <Button>
+                  <FormattedMessage id={link} defaultMessage={`__${link}__`} />
+                </Button>
+              </Link>
+            )
+          })}
           <div style={{ flex: 1 }} />
           <Locales />
           <Link to="/login">
@@ -24,7 +33,6 @@ export default class extends React.PureComponent {
               <FormattedMessage id="login" defaultMessage="__login__" />
             </Button>
           </Link>
-          <Button href="https://github.com/JimmyLERAY/iSchool">GitHub</Button>
         </Toolbar>
       </AppBar>
     )

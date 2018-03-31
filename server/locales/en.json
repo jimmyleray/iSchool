@@ -2,5 +2,11 @@
   "language": "English",
   "homePage": "Home page",
   "login": "Login",
-  "loginPage": "Login page"
+  "loginPage": "Login page",
+  "individuals": "Individuals",
+  "individualsPage": "Individuals page",
+  "professionals": "Professionals",
+  "professionalsPage": "Professionals page",
+  "contributors": "Contributors",
+  "contributorsPage": "Contributors page"
 }
