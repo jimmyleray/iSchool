@@ -2,16 +2,25 @@
 import * as compression from 'compression'
 import * as mongoose from 'mongoose'
 import * as express from 'express'
+import * as _ from 'lodash'
 import * as path from 'path'
 
+// Import mongoose models
+import User from './models/User'
+
 // Import logger utils
-import { log, success, error } from './src/log'
+import { log, info, success, error } from './src/log'
+
+// Detect and log the environment
+import { env, isProd } from './src/env'
+log(info(`${_.capitalize(env)} environment detected`))
+const getCurrentDBHost = () => (isProd() ? 'Heroku' : 'Local')
 
 // Connection to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017')
-  .then(() => log(success('Connected to MongoDB')))
-  .catch(() => log(error('MongoDB connection failed')))
+  .then(() => log(success(`Connected to ${getCurrentDBHost()} MongoDB`)))
+  .catch(() => log(error(`MongoDB connection failed on ${getCurrentDBHost()}`)))
 
 // Create Express App
 const app = express()
