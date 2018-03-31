@@ -10,11 +10,15 @@ app.use(compression())
 
 app.set('port', process.env.PORT || 4200)
 
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'client')))
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.get('/locale/:lang', (req, res) => {
+  res.sendFile(path.join(__dirname, 'locales', `${req.params.lang}.json`))
+})
+
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+  res.sendFile(path.join(__dirname, 'client', 'index.html'))
 })
 
 app.listen(app.get('port'), () => {

@@ -19,7 +19,7 @@ class i18n extends React.Component {
   }
 
   loadTranslations(locale) {
-    fetch(`/locales/${locale}.json`)
+    fetch(`/locale/${locale}`)
       .then(res => res.json())
       .then(messages => this.setState({ messages }))
   }
