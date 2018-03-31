@@ -1,8 +1,10 @@
 import * as compression from 'compression'
 import * as express from 'express'
 import * as path from 'path'
-
 import { log, success } from './src/log'
+
+import * as mongoose from 'mongoose'
+mongoose.connect(process.env.MONGODB_URI).then(log)
 
 const app = express()
 
