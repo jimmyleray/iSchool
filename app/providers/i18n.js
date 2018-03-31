@@ -5,6 +5,7 @@ import fr from 'react-intl/locale-data/fr'
 import en from 'react-intl/locale-data/en'
 import es from 'react-intl/locale-data/es'
 import { messagesWithLocale } from '../config/i18n'
+import Loading from '../components/loading'
 
 addLocaleData([...fr, ...en, ...es])
 
@@ -12,12 +13,46 @@ const mapStateToProps = state => ({
   locale: state.i18n.locale
 })
 
-class i18n extends React.PureComponent {
+class i18n extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { messages: null }
+  }
+
+  loadTranslations(locale) {
+    fetch(`/locales/${locale}.json`)
+      .then(res => res.json())
+      .then(messages => this.setState({ messages }))
+  }
+
+  componentDidMount() {
+    this.loadTranslations(this.props.locale)
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.messages === null) {
+      this.loadTranslations(this.props.locale)
+    }
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.locale !== prevState.locale) {
+      return {
+        locale: nextProps.locale,
+        messages: null
+      }
+    } else {
+      return null
+    }
+  }
+
   render() {
-    return (
-      <IntlProvider locale={this.props.locale} messages={messagesWithLocale(this.props.locale)}>
+    return this.state.messages ? (
+      <IntlProvider locale={this.props.locale} messages={this.state.messages}>
         {this.props.children}
       </IntlProvider>
+    ) : (
+      <Loading />
     )
   }
 }

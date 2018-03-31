@@ -6,7 +6,7 @@ import { InputLabel } from 'material-ui/Input'
 import Select from 'material-ui/Select'
 import { MenuItem } from 'material-ui/Menu'
 import { changeLocale } from '../store/i18n'
-import { languages } from '../config/i18n'
+import { locales } from '../config/locales'
 
 const mapStateToProps = state => ({
   locale: state.i18n.locale
@@ -24,9 +24,9 @@ class Locales extends React.PureComponent {
       <form autoComplete="off" style={{ marginRight: '16px' }}>
         <FormControl>
           <Select name="locale" value={this.props.locale} onChange={this.props.onChange}>
-            {R.keys(languages).map(key => (
+            {R.keys(locales).map(key => (
               <MenuItem value={key} key={key}>
-                {languages[key]}
+                {locales[key]}
               </MenuItem>
             ))}
           </Select>
