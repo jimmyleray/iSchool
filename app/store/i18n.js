@@ -1,4 +1,4 @@
-import * as R from 'ramda'
+import { take } from 'ramda'
 
 /**
  * Actions
@@ -9,7 +9,7 @@ export const changeLocale = locale => ({ type: 'CHANGE_LOCALE', locale })
  * Reducers
  **/
 const initialState = {
-  locale: navigator && navigator.language ? R.take(2, navigator.language) : 'en'
+  locale: navigator && navigator.language ? take(2, navigator.language) : 'en'
 }
 
 export default (state = initialState, action) => {

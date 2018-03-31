@@ -1,5 +1,5 @@
 import React from 'react'
-import * as R from 'ramda'
+import { keys } from 'ramda'
 import { connect } from 'react-redux'
 import { FormControl } from 'material-ui/Form'
 import { InputLabel } from 'material-ui/Input'
@@ -24,7 +24,7 @@ class Locales extends React.PureComponent {
       <form autoComplete="off" style={{ marginRight: '16px' }}>
         <FormControl>
           <Select name="locale" value={this.props.locale} onChange={this.props.onChange}>
-            {R.keys(locales).map(key => (
+            {keys(locales).map(key => (
               <MenuItem value={key} key={key}>
                 {locales[key]}
               </MenuItem>
