@@ -6,6 +6,7 @@ import Typography from 'material-ui/Typography'
 import { Link } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 import Locales from './locales'
+import Menu from './menu'
 
 export default class extends React.PureComponent {
   render() {
@@ -17,22 +18,10 @@ export default class extends React.PureComponent {
               i<b>School</b>
             </Typography>
           </Link>
-          {['individuals', 'professionals', 'contributors'].map((link, idx) => {
-            return (
-              <Link key={idx} to={`/${link}`}>
-                <Button>
-                  <FormattedMessage id={link} defaultMessage={`__${link}__`} />
-                </Button>
-              </Link>
-            )
-          })}
+          <Menu links={['individuals', 'professionals', 'contributors']} />
           <div style={{ flex: 1 }} />
           <Locales />
-          <Link to="/login">
-            <Button>
-              <FormattedMessage id="login" defaultMessage="__login__" />
-            </Button>
-          </Link>
+          <Menu links={['login', 'subscribe']} />
         </Toolbar>
       </AppBar>
     )
