@@ -6,6 +6,7 @@ import Typography from 'material-ui/Typography'
 import { Link } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 import Locales from './locales'
+import Flexbox from './flexbox'
 import Menu from './menu'
 
 export default class extends React.PureComponent {
@@ -19,7 +20,7 @@ export default class extends React.PureComponent {
             </Typography>
           </Link>
           <Menu links={['individuals', 'professionals', 'contributors']} />
-          <div style={{ flex: 1 }} />
+          <Flexbox />
           <Locales />
           <Menu links={['login', 'subscribe']} />
         </Toolbar>

@@ -9,14 +9,12 @@ export default class extends React.Component {
   }
 
   render() {
-    return this.props.links.map((link, idx) => {
-      return (
-        <Link key={idx} to={`/${link}`}>
-          <Button>
-            <FormattedMessage id={link} defaultMessage={`__${link}__`} />
-          </Button>
-        </Link>
-      )
-    })
+    return this.props.links.map((link, idx) => (
+      <Link key={idx} to={`/${link}`}>
+        <Button>
+          <FormattedMessage id={link} defaultMessage={`__${link}__`} />
+        </Button>
+      </Link>
+    ))
   }
 }
