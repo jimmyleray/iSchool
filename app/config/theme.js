@@ -7,7 +7,7 @@ const theme = {
       main: colors.orange[300]
     },
     secondary: {
-      main: colors.red[300]
+      main: colors.blue[300]
     }
   }
 }
