@@ -5,7 +5,7 @@ import { routes } from '../config/routes'
 export default class extends React.Component {
   render() {
     return (
-      <div style={{ padding: '30px' }}>
+      <div className="content">
         <Switch>
           {routes.map(route => (
             <Route
