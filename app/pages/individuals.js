@@ -13,7 +13,7 @@ export default class extends React.PureComponent {
             {appTitle} {titleSep} Individuals
           </title>
         </MetaTags>
-        <Typography variant="display1">
+        <Typography variant="display1" className="center">
           <FormattedMessage id="individualsPage" defaultMessage="__individualsPage__" />
         </Typography>
       </React.Fragment>

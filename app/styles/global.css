@@ -9,3 +9,7 @@ a {
   max-width: 50em;
   margin: 0 auto;
 }
+
+.center {
+  text-align: center;
+}

@@ -13,7 +13,7 @@ export default class extends React.PureComponent {
             {appTitle} {titleSep} Subscribe
           </title>
         </MetaTags>
-        <Typography variant="display1">
+        <Typography variant="display1" className="center">
           <FormattedMessage id="subscribePage" defaultMessage="__subscribePage__" />
         </Typography>
       </React.Fragment>
